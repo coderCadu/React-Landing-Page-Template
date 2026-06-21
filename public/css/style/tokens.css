@@ -1,0 +1,21 @@
+:root {
+  /* Design system: dark theme color tokens */
+  --color-bg: #0d0f14;
+  --color-bg-alt: #141821;
+  --color-surface: #1b1f29;
+  --color-surface-hover: #242837;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+  --color-text: #f2f3f7;
+  --color-text-body: #aab0bd;
+  --color-text-muted: #757c8c;
+  --color-accent-start: #5ca9fb;
+  --color-accent-end: #6372ff;
+  --gradient-accent: linear-gradient(to right, var(--color-accent-start) 0%, var(--color-accent-end) 100%);
+  --gradient-accent-reverse: linear-gradient(to right, var(--color-accent-end) 0%, var(--color-accent-start) 100%);
+  --color-on-accent: #ffffff;
+  --color-on-accent-muted: rgba(255, 255, 255, 0.78);
+  --color-danger: #ff5c7a;
+  --shadow-color: rgba(0, 0, 0, 0.55);
+  --shadow-color-soft: rgba(0, 0, 0, 0.35);
+}
