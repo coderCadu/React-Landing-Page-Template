@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = (props) => {
   return (
-    <div id="about">
+    <section id="about">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6">
@@ -38,6 +38,6 @@ export const About = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Team = (props) => {
   return (
-    <div id="team" className="text-center">
+    <section id="team" className="text-center">
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title">
           <h2>Meet the Team</h2>
@@ -11,7 +11,7 @@ export const Team = (props) => {
             dapibus leonec.
           </p>
         </div>
-        <div id="row">
+        <div className="row">
           {props.data
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
@@ -28,6 +28,6 @@ export const Team = (props) => {
             : "loading"}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

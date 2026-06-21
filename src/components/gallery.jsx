@@ -3,7 +3,7 @@ import React from "react";
 
 export const Gallery = (props) => {
   return (
-    <div id="portfolio" className="text-center">
+    <section id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
           <h2>Gallery</h2>
@@ -31,6 +31,6 @@ export const Gallery = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

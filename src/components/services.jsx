@@ -2,7 +2,7 @@ import React from "react";
 
 export const Services = (props) => {
   return (
-    <div id="services" className="text-center">
+    <section id="services" className="text-center">
       <div className="container">
         <div className="section-title">
           <h2>Our Services</h2>
@@ -26,6 +26,6 @@ export const Services = (props) => {
             : "loading"}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

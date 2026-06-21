@@ -2,7 +2,7 @@ import React from "react";
 
 export const Testimonials = (props) => {
   return (
-    <div id="testimonials">
+    <section id="testimonials">
       <div className="container">
         <div className="section-title text-center">
           <h2>What our clients say</h2>
@@ -26,6 +26,6 @@ export const Testimonials = (props) => {
             : "loading"}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
