@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A single-page React landing/marketing site template, bootstrapped with Create React App (`react-scripts`). All visible content (headlines, services, gallery, testimonials, team, contact info) is driven by one JSON file rather than hardcoded in components.
+A single-page React landing/marketing site template, bootstrapped with Create React App (`react-scripts`). Most variable content (testimonials, team, contact info, feature/service/portfolio items) is driven by `src/data/data.json`; some section headings and placeholder intro paragraphs (e.g. in `services.jsx`, `gallery.jsx`) are still hardcoded directly in components.
 
 ## Commands
 
@@ -25,7 +25,7 @@ There is no separate lint script; ESLint runs via the `eslintConfig: { extends: 
 
 **To add/change site content** (text, services, gallery images, team members, contact details): edit `src/data/data.json` only — do not hardcode copy into components. Image paths in the JSON are relative to `public/` (e.g. `img/portfolio/01-large.jpg` → `public/img/portfolio/01-large.jpg`).
 
-**To add a new page section:** create a component in `src/components/`, import and render it in `src/App.jsx` with `data={landingPageData.YourKey}`, add the matching key to `data/data.json`, a matching `public/css/style/<section>.css` file linked from `index.html`, and a nav anchor in `navigation.jsx` if it should appear in the menu.
+**To add a new page section:** create a component in `src/components/`, import and render it in `src/App.jsx` with `data={landingPageData.YourKey}`, add the matching key to `src/data/data.json`, a matching `public/css/style/<section>.css` file linked from `index.html`, and a nav anchor in `navigation.jsx` if it should appear in the menu.
 
 **Styling** is plain CSS/Bootstrap, not CSS Modules or styled-components. `public/css/style/` holds one file per concern, each linked individually (in cascade order) from `public/index.html`: `tokens.css` (the `:root` design-token color palette), `base.css` (typography/reset), `layout.css` (shared `.section-title` utility), `buttons.css`, `navigation.css`, then one file per page section (`header.css`, `features.css`, `about.css`, `services.css`, `portfolio.css`, `testimonials.css`, `team.css`, `contact.css`, `footer.css`) mirroring the `src/components/*.jsx` split 1:1. `public/css/bootstrap.css` is loaded separately, plus `src/App.css`/`src/index.css` for component-local tweaks. Bootstrap 3 grid classes (`col-md-*`, `row`, `container`) are used throughout JSX. All section colors reference the tokens in `tokens.css` — don't hardcode new hex colors.
 
